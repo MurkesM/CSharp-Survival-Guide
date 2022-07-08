@@ -278,15 +278,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 381774945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d565c9d8ae9b7b428f135dc3070344f, type: 3}
+  m_Script: {fileID: 11500000, guid: cbf1674d295bdf147ae66d69ea1b558e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positions:
-  - {x: 4, y: 0, z: 0}
-  - {x: 0, y: 5, z: 0}
-  - {x: 2, y: 0, z: 0}
-  - {x: 0, y: 0, z: 8}
-  - {x: 0, y: 6, z: 0}
+  _meshRenderer: {fileID: 381774947}
 --- !u!1 &474246235
 GameObject:
   m_ObjectHideFlags: 0
