@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : Item
+public class Food : Item
 {
-   [SerializeField] float attackSpeed;
-    [SerializeField] float damage;
+    [SerializeField] float healthRegen;
+    [SerializeField] float consumeSpeed;
 
     void Start()
     {
