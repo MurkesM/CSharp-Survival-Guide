@@ -1,30 +1,28 @@
-﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    ExampleClass exampleClass = new ExampleClass(5, "default");
-
-    ExampleStruct exampleStruct;
+    Item _sword;
+    Item _bread;
 
     void Start()
     {
-        exampleStruct.testInt = 5;
-        exampleStruct.testString = "default";
+        _sword = new Item();
+        Item.itemCount++;
 
-        Debug.Log($"Struct testString before change = {exampleStruct.testString}");
+        _bread = new Item();
+        Item.itemCount++;
 
-        ChangeValue(exampleStruct);
+        _sword.name = "sword";
+        _bread.name = "bread";
 
-        Debug.Log($"Struct testString after change = {exampleStruct.testString}");
-    }
-    void ChangeValue(ExampleStruct exampleStruct) //value type
-    {
-        exampleStruct.testString = "updated";
-        Debug.Log(exampleStruct.testString);
+        
     }
 
-    void ChangeValue(ExampleClass exampleClass) //reference type
+    void Update()
     {
-        exampleClass.testString = "updated";
+        
     }
 }

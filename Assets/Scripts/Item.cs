@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item
 {
-    public string itemName;
-    public int ID;
+    public string name;
     public float weight;
+
+    public static int itemCount;
 }
