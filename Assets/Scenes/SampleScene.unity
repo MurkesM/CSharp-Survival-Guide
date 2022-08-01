@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -311,23 +311,207 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee2eb968ea089f74b8dcc93d5d085e19, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b1cef67d9142094f8f3701bf7f0840b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listTest: []
-  arrayTest:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cube: {fileID: 1430061391367486593, guid: 242a7b67669f34b40b78578e2c272ac6, type: 3}
-  sphere: {fileID: 2184249201046730329, guid: 5a4ca9dbdb0afc54d8b29782ab861561, type: 3}
-  capsule: {fileID: 7855954970752703512, guid: 55ed4f65cfc7076419759a548642df9e, type: 3}
-  _material: {fileID: 2100000, guid: c858b2a1c86130c4fb23811d58403033, type: 2}
-  spawnedObjects: []
+  items:
+  - name: Sword
+    weight: 10
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: Axe
+    weight: 12
+    color: {r: 0, g: 1, b: 0.105364084, a: 0}
+    sprite: {fileID: 0}
+  - name: Apple
+    weight: 2
+    color: {r: 1, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
+  - name: 
+    weight: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sprite: {fileID: 0}
