@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194230}
   - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
@@ -311,207 +312,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1cef67d9142094f8f3701bf7f0840b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a0ca8d9343066449920f2ef23dbd9f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - name: Sword
-    weight: 10
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: Axe
-    weight: 12
-    color: {r: 0, g: 1, b: 0.105364084, a: 0}
-    sprite: {fileID: 0}
-  - name: Apple
-    weight: 2
-    color: {r: 1, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-  - name: 
-    weight: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
+  employeeName: 'John '
+  salary: 30000
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4167b25288b47754185c95af4a719483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  employeeName: Jim
+  hoursWorked: 20
+  hourlyRate: 10

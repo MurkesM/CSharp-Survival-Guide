@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour, IDamagable, IHealable
 {
-    // Start is called before the first frame update
-    void Start()
+    public int Health { get; set; }
+    public int HealthGiven { get; set; }
+
+    public void DamagePlayer(int damage)
     {
-        
+        Debug.Log("Damage Player");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RegenHealth(int health)
     {
-        
+        Debug.Log("Heal");
     }
 }
