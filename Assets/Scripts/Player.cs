@@ -2,12 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour, IDamagable
+public class Player : MonoBehaviour
 {
-    public int Health { get; set; }
+    public delegate void OnGameOver();
+    public static event OnGameOver GameOver;
 
-    public void DamagePlayer(int damage)
+    void OnEnable()
     {
-        Health -= damage;
+        GameOver += StopPlayerInput;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameOver?.Invoke();
+        }
+    }
+
+    void StopPlayerInput()
+    {
+        Debug.Log("Stop player input");
+    }
+
+    void OnDisable()
+    {
+        Player.GameOver -= StopPlayerInput;
     }
 }

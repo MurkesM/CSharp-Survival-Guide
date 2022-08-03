@@ -1,19 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour, IDamagable, IHealable
+public class Enemy : MonoBehaviour
 {
-    public int Health { get; set; }
-    public int HealthGiven { get; set; }
-
-    public void DamagePlayer(int damage)
+    void OnEnable()
     {
-        Debug.Log("Damage Player");
+        Player.GameOver += StopAttacking;
     }
 
-    public void RegenHealth(int health)
+    void StopAttacking()
     {
-        Debug.Log("Heal");
+        Debug.Log("Stop attacking player");
+    }
+
+    void OnDisable()
+    {
+        Player.GameOver -= StopAttacking;
     }
 }
