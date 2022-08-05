@@ -314,6 +314,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31aa0514700b5a548a88e184cf640e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _items:
+  - name: Sword
+    itemID: 0
+    buff: 10
+  - name: Axe
+    itemID: 1
+    buff: 21
+  - name: Shield
+    itemID: 2
+    buff: 8
+  - name: Arrow
+    itemID: 3
+    buff: 5
+  - name: Armor
+    itemID: 4
+    buff: 25
 --- !u!1 &1295398806
 GameObject:
   m_ObjectHideFlags: 0

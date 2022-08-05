@@ -1,17 +1,19 @@
-using System; //needed to use actions
+using System; 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Main : MonoBehaviour
 {
-    public Func<int, int, int> Sum;
+    [SerializeField] List<Item> _items;
+
+    int[] possibleGrades = { 30, 94, 62, 73, 100, 22, 70};
 
     void Start()
     {
-        Sum = (a, b) => a + b;
+        var gradeAverage = possibleGrades.Average(grade => grade);
 
-        int sum = Sum(1, 10);
-        Debug.Log(sum);
-    }
+        Debug.Log(gradeAverage);
+    }       
 }
