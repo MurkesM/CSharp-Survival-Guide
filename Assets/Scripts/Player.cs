@@ -6,6 +6,6 @@ public class Player : MonoBehaviour
 {
     void Start()
     {
-        GameManager.Instance.DisplayName();
+        GameManager.Instance.isGameOver = false;
     }
 }
