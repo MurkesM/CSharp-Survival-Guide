@@ -1,46 +1,58 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PoolManager : MonoBehaviour
 {
-    private PoolManager _instance;
-    public PoolManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-                Debug.Log("PoolManager is Null");
+    [SerializeField] private GameObject gameObjectPrefab;
+    [SerializeField] private int amountToGenerate = 20;
 
-            return _instance;
-        }
+    private List<GameObject> gameObjectPool = new List<GameObject>();
+
+    private GameObject currentGameObject;
+
+    private void Awake()
+    {
+        gameObjectPool = GenerateGameObjects(amountToGenerate);
     }
 
-    [SerializeField] GameObject _projectilePrefab;
-    [SerializeField] int _amountToSpawn;
-    [SerializeField] List<GameObject> _projectilePool = new List<GameObject>();
-    
-
-    void Awake()
+    private List<GameObject> GenerateGameObjects(int amountToGenerate)
     {
-        _instance = this;
-    }
-
-    void Start()
-    {
-      _projectilePool = GenerateBullets();
-    }
-
-    List<GameObject> GenerateBullets()
-    {
-        for (int i = 0; i < _amountToSpawn; i++)
-        {
-            GameObject projectile = Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
-            _projectilePool.Add(projectile);
-            //make bullet child of container object
-            //set all bullets to false by default
-        }
+        for (int i = 0; i < amountToGenerate; i++)
+            CreateGameObject(false);
       
-        return _projectilePool;
+        return gameObjectPool;
+    }
+
+    private GameObject CreateGameObject(bool setActive)
+    {
+        //create new gameobject
+        currentGameObject = Instantiate(gameObjectPrefab, transform);
+
+        //turn off by default
+        currentGameObject.SetActive(setActive);
+
+        //add to list
+        gameObjectPool.Add(currentGameObject);
+
+        return currentGameObject;
+    }
+
+    /// <summary>
+    /// Returns the first active gameobject in the pre-created pool of gameobjects.
+    /// </summary>
+    public GameObject RequestGameObject()
+    {
+        //loop through the pool to find and return the first inactive gameobject
+        foreach (GameObject gameObject in gameObjectPool)
+        {
+            if (!gameObject.activeSelf)
+            {
+                gameObject.SetActive(true);
+                return gameObject;
+            }
+        }
+
+        //if no gameobjects where found, then create another one on the fly and add it to the pool
+        return CreateGameObject(true);
     }
 }
