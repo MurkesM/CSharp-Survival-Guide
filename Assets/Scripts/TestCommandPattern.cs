@@ -16,8 +16,7 @@ public class TestCommandPattern : MonoBehaviour
                 {
                     Color randomColor = new(Random.value, Random.value, Random.value);
 
-                    ICommand cubeClickCommand = new CubeClickCommand(hit.transform.gameObject, randomColor);
-                    cubeClickCommand.Execute();
+                    new CubeClickCommand(hit.transform.gameObject, randomColor);
                 }
             }
         }

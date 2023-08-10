@@ -2,63 +2,55 @@ using System.Collections.Generic;
 
 public class CommandManager : MonoSingleton<CommandManager>
 {
-    private List<ICommand> commandList = new();
-
-    private int currentCommandIndex = 0;
+    private Stack<ICommand> undoStack = new();
+    private Stack<ICommand> redoStack = new();
 
     public void AddCommand(ICommand command)
     {
-        //if a new command was added and we started already reversing through the list
-        //then remove all the commands after the new command before adding the new command.
-        //this effectively overwrites any redo commands if a new command is added.
-        //just like unity's undo/redo system.
-        if (currentCommandIndex < commandList.Count)
-            commandList.RemoveRange(currentCommandIndex, commandList.Count - currentCommandIndex);
+        //if a new command was added and we started already reversing through the undo stack
+        //then remove all the redo commands after the new command before adding the new command to the undo stack.
+        //this effectively overwrites any redo commands if a new command is added while already reversing through the undo commands.
+        //this can be thought of as starting a new line of commands.
+        //the result is just like the unity editors undo/redo system.
+        if (redoStack.Count > 0)
+            redoStack.Clear();
 
-        //add new command
-        commandList.Add(command);
+        //add to undo stack
+        undoStack.Push(command);
 
         //execute newest command
         command.Execute();
-
-        //increment index if there is more than 1 command in the list. The first command doesn't need to increment the index
-        //because the index is defaulted to 0
-        if (commandList.Count > 1)
-            currentCommandIndex++;
     }
 
     public void UndoCommand()
     {
-        //return if there isn't at least 1 command or the index is somehow less than 0
-        if (commandList.Count <= 0 || currentCommandIndex < 0)
+        //return if there isn't at least 1 command
+        if (undoStack.Count <= 0)
             return;
 
-        //undo current command
-        commandList[currentCommandIndex].Undo();
+        //add the command being undone to the redo stack
+        redoStack.Push(undoStack.Peek());
 
-        //decrement index
-        currentCommandIndex--;
+        //undo current command and remove from the undo stack
+        undoStack.Pop().Undo();
     }
 
     public void RedoCommand()
     {
-        //return if there isn't at least 1 command or the index is somehow greater than the list length
-        if (commandList.Count <= 0 || currentCommandIndex > commandList.Count - 1)
+        //return if there isn't at least 1 command
+        if (redoStack.Count <= 0)
             return;
 
-        //increment index
-        currentCommandIndex++;
+        //add the command being redone to the undo stack
+        undoStack.Push(redoStack.Peek());
 
-        //execute current command
-        commandList[currentCommandIndex].Execute();
+        //redo current command and remove from the redo stack
+        redoStack.Pop().Execute();
     }
 
     public void ClearCommands()
     {
-        //reset list
-        commandList.Clear();
-
-        //reset index
-        currentCommandIndex = 0;
+        undoStack.Clear();
+        redoStack.Clear();
     }
 }
